@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комментарии к статье </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Комментарии к статье</h1>
+    <p>Пример варианта компонента для добавления комментариев с ответами.</p>
+    
+    
+    <comment-section></comment-section>
+
+    
+    <template id="commentTemplate">
+        <div class="comment-content">
+            <slot name="content">Ваш комментарий...</slot>
+            <button class="like-btn">👍 Нравится <span class="like-count">0</span></button>
+            <button class="reply-btn">Ответить</button>
+            <button class="edit-btn">Редактировать</button>
+            <button class="delete-btn">Удалить</button>
+            <div class="nested-comments"></div>
+        </div>
+    </template>
+
+    
+    <script src="comments.js"></script>
+</body>
+</html>
